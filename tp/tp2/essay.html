@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>essay</title>
+</head>
+<body>
+	<h1>ESSAY</h1>
+	<p id="nama"></p>
+	<p id="nim"></p>
+	<script>
+		 var nama = prompt("Masukkan  NAMA", "Nama anda");
+		 var nim = prompt("Masukkan  NIM", "Nim anda");
+		 if (nama!=null) {
+		 	document.getElementById("nama").innerHTML="NAMA : "+nama
+		 }
+		 if (nim!=null) {
+		 	document.getElementById("nim").innerHTML="NIM : "+nim
+		 }
+		 alert("Hallo nama saya "+nama+"Nim saya "+nim);
+		 var a = confirm("apakah anda "+nama);
+		 if (a==true) {
+		 	confirm("Halo "+nama)
+		 }
+		 else{
+		 	confirm("Bye Bye")
+		 }
+
+   
+	</script>
+
+</body>
+</html>

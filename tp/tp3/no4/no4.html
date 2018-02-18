@@ -1,0 +1,99 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.car_1301164131{
+			position: relative;
+			width: 300px;
+			height: 300px;
+		}
+		img{
+			width: 300px;
+			height: 300px;
+		}
+		.block_1301164131{
+			position: fixed;
+			right: 0px;
+			width: 10px;
+			height: 300px;
+			background-color: white;
+			border: none;
+		}
+	</style>
+	
+</head>
+<body>
+	<span class="car_1301164131"><img src="pesawat.png" alt=""></span>
+	<span class="block_1301164131"></span>
+
+	<div>
+	<button id="btn1_1301164131">Maju 10 pixel</button>
+	<button id="btn2_1301164131">Maju 1 langkah</button>
+	<button id="btn3_1301164131">Maju 2 langkah</button>
+	<button id="btn4_1301164131">Mundur 10 pixel</button>
+	<button id="btn5_1301164131">Mundur 1 langkah</button>
+	<button id="btn6_1301164131">Mundur 2 langkah</button>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		var p = parseInt($(".block_1301164131").position().left); 
+		var width = parseInt($(".car_1301164131").width());  
+		var position = 0;
+		$(document).ready(function() {
+			$("#btn1_1301164131").click(function() {
+				position+=10;	
+				$(".car_1301164131").animate({left:position});
+				checkPosition();
+			});
+			$("#btn2_1301164131").click(function() {
+				position+=width;
+
+				$(".car_1301164131").animate({
+					left: position
+				});
+				checkPosition();
+			});
+			$("#btn3_1301164131").click(function() {
+				position+=2*width;
+				
+				$(".car_1301164131").animate({
+					left: position
+				});
+				checkPosition();
+			});
+			$("#btn4_1301164131").click(function() {
+				position-=10;
+			
+				$(".car_1301164131").animate({
+					left: position
+				});
+			});
+			$("#btn5_1301164131").click(function() {
+				position-=width;
+			
+				$(".car_1301164131").animate({
+					left: position
+				});
+			});
+			$("#btn6_1301164131").click(function() {
+				position-=2*width;
+			
+				$(".car_1301164131").animate({
+					left: position
+				});
+			});
+			function checkPosition() {
+				if (position >= p) {
+					position = 0;
+					$(".car_1301164131").animate({
+						left: position
+					});
+				}
+			}	
+		});
+	</script>
+	
+	
+</body>
+</html>
